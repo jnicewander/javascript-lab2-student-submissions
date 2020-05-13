@@ -73,7 +73,13 @@ function findLowestScore(array) {
     return array.find(obj => obj.score === lowestScore);
 };
 
-
+function findAverageScore(array) {
+    let sum = 0;
+    for(let element of array) {
+        sum = element.score += element.score
+    }
+    return sum / array.length;
+};
 
 
 // addSubmission(submissions, "Justin", "58", "1988-03-27");
@@ -82,3 +88,4 @@ function findLowestScore(array) {
 // editSubmission(submissions, 0, 58)
 // findSubmissionByName(submissions, "Jack");
 // findLowestScore(submissions);
+// findAverageScore(submissions);
