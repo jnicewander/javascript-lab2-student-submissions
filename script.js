@@ -81,6 +81,13 @@ function findAverageScore(array) {
     return sum / array.length;
 };
 
+function filterPassing(array) {
+    return array.filter(obj => obj.score >= 60);
+};
+
+function filter90AndAbove(array) {
+    return array.filter(obj => obj.score >= 90);
+};
 
 // addSubmission(submissions, "Justin", "58", "1988-03-27");
 // deleteSubmissionByIndex(submissions, 3);
@@ -89,3 +96,5 @@ function findAverageScore(array) {
 // findSubmissionByName(submissions, "Jack");
 // findLowestScore(submissions);
 // findAverageScore(submissions);
+// filterPassing(submissions);
+// filter90AndAbove(submissions);
