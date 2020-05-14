@@ -3,26 +3,33 @@ const submissions = [
         name: "Jane",
         score: 95,
         date: "2020-01-24",
-        passed: true
-        
+        passed: function() {
+            return this.score >= 60;
+        }
     },
     {
         name: "Joe",
         score: 77,
         date: "2018-05-14",
-        passed: true
+        passed: function() {
+            return this.score >= 60;
+        }
     },
     {
         name: "Jack",
         score: 59,
         date: "2019-07-05",
-        passed: false
+        passed: function () {
+            return this.score >= 60;
+        }
     },
     {
         name: "Jill",
         score: 88,
         date: "2020-04-22",
-        passed: true
+        passed: function () {
+            return this.score >= 60;
+        }
     }
 ];
 
@@ -33,7 +40,7 @@ function addSubmission(array, newName, newScore, newDate) {
             score:newScore, 
             date:newDate,
             passed: function() {
-                return newScore >= 60;
+                return this.score >= 60;
             }
         }
     );
@@ -89,7 +96,10 @@ function filter90AndAbove(array) {
     return array.filter(obj => obj.score >= 90);
 };
 
-// addSubmission(submissions, "Justin", "58", "1988-03-27");
+
+// TESTS
+
+// addSubmission(submissions, "Justin", "32", "1988-03-27");
 // deleteSubmissionByIndex(submissions, 3);
 // deleteSubmissionByName(submissions, "Joe");
 // editSubmission(submissions, 0, 58)
@@ -98,3 +108,4 @@ function filter90AndAbove(array) {
 // findAverageScore(submissions);
 // filterPassing(submissions);
 // filter90AndAbove(submissions);
+console.log(submissions[4].passed());
