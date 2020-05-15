@@ -69,15 +69,13 @@ function findSubmissionByName(array, name) {
 };
 
 function findLowestScore(array) {
-    let lowestScore = array[0].score;
+    let lowestScore = array[0];
     array.forEach(element => {
-        if (element.score < lowestScore) {
-            lowestScore = element.score;
+        if (element.score < lowestScore.score) {
+            lowestScore = element;
         }
     });
-    // return array.filter(obj => obj.score === lowestScore);  <-- This code makes more sense from a practical standpoint but,
-    // the assignment asked to return an object, not an array of objects
-    return array.find(obj => obj.score === lowestScore);
+    return lowestScore;
 };
 
 function findAverageScore(array) {
@@ -104,8 +102,8 @@ function filter90AndAbove(array) {
 // deleteSubmissionByName(submissions, "Joe");
 // editSubmission(submissions, 0, 58)
 // findSubmissionByName(submissions, "Jack");
-// findLowestScore(submissions);
+// console.log(findLowestScore(submissions));
 // findAverageScore(submissions);
 // filterPassing(submissions);
 // filter90AndAbove(submissions);
-console.log(submissions[4].passed());
+// console.log(submissions[4].passed());
