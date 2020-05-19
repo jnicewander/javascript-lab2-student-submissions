@@ -83,7 +83,7 @@ function findAverageScore(array) {
 };
 
 function filterPassing(array) {
-    return array.filter(obj => obj.score >= 60);
+    return array.filter(obj => obj.passed());
 };
 
 function filter90AndAbove(array) {
@@ -93,13 +93,13 @@ function filter90AndAbove(array) {
 
 // TESTS
 
-// addSubmission(submissions, "Justin", "32", "1988-03-27");
+addSubmission(submissions, "Justin", "32", "1988-03-27");
 // deleteSubmissionByIndex(submissions, 3);
 // deleteSubmissionByName(submissions, "Joe");
 // editSubmission(submissions, 0, 60);
 // findSubmissionByName(submissions, "Jack");
 // console.log(findLowestScore(submissions));
 // findAverageScore(submissions);
-// filterPassing(submissions);
+console.log(filterPassing(submissions));
 // filter90AndAbove(submissions);
 // console.log(submissions[0].passed());
