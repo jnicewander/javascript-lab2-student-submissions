@@ -57,11 +57,7 @@ function deleteSubmissionByName(array, name) {
 
 function editSubmission(array, index, score) {
     array[index].score = score;
-    if (array[index].score >= 60) {
-        array[index].passed = true;
-    } else {
-        array[index].passed = false;
-    };
+    return array[index].score >= 60 ? array[index].passed : !array[index].passed;
 };
 
 function findSubmissionByName(array, name) {
@@ -100,10 +96,10 @@ function filter90AndAbove(array) {
 // addSubmission(submissions, "Justin", "32", "1988-03-27");
 // deleteSubmissionByIndex(submissions, 3);
 // deleteSubmissionByName(submissions, "Joe");
-// editSubmission(submissions, 0, 58)
+// editSubmission(submissions, 0, 60);
 // findSubmissionByName(submissions, "Jack");
 // console.log(findLowestScore(submissions));
 // findAverageScore(submissions);
 // filterPassing(submissions);
 // filter90AndAbove(submissions);
-// console.log(submissions[4].passed());
+// console.log(submissions[0].passed());
