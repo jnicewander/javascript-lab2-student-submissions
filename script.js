@@ -51,7 +51,7 @@ function deleteSubmissionByIndex(array, index) {
 };
 
 function deleteSubmissionByName(array, name) {
-    let index = array.findIndex(x => x.name === name);
+    let index = array.findIndex(obj => obj.name === name);
     array.splice(index, 1);
 };
 
@@ -66,9 +66,9 @@ function findSubmissionByName(array, name) {
 
 function findLowestScore(array) {
     let lowestScore = array[0];
-    array.forEach(element => {
-        if (element.score < lowestScore.score) {
-            lowestScore = element;
+    array.forEach(obj => {
+        if (obj.score < lowestScore.score) {
+            lowestScore = obj;
         }
     });
     return lowestScore;
@@ -76,8 +76,8 @@ function findLowestScore(array) {
 
 function findAverageScore(array) {
     let sum = 0;
-    for(let element of array) {
-        sum = element.score += element.score
+    for(let obj of array) {
+        sum = obj.score += obj.score
     }
     return sum / array.length;
 };
