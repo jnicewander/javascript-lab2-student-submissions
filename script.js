@@ -3,35 +3,31 @@ const submissions = [
         name: "Jane",
         score: 95,
         date: "2020-01-24",
-        passed: function() {
-            return this.score >= 60;
-        }
+        passed: passOrFail
     },
     {
         name: "Joe",
         score: 77,
         date: "2018-05-14",
-        passed: function() {
-            return this.score >= 60;
-        }
+        passed: passOrFail
     },
     {
         name: "Jack",
         score: 59,
         date: "2019-07-05",
-        passed: function () {
-            return this.score >= 60;
-        }
+        passed: passOrFail
     },
     {
         name: "Jill",
         score: 88,
         date: "2020-04-22",
-        passed: function () {
-            return this.score >= 60;
-        }
+        passed: passOrFail
     }
 ];
+
+function passOrFail() {
+    return this.score >= 60;
+};
 
 function addSubmission(array, newName, newScore, newDate) {
     array.push(
@@ -39,9 +35,7 @@ function addSubmission(array, newName, newScore, newDate) {
             name:newName, 
             score:newScore, 
             date:newDate,
-            passed: function() {
-                return this.score >= 60;
-            }
+            passed:passOrFail
         }
     );
 };
@@ -93,11 +87,11 @@ function filter90AndAbove(array) {
 
 // TESTS
 
-// addSubmission(submissions, "Justin", 32, "1988-03-27");
-// addSubmission(submissions, "Luke", 91, "2020-20-05");
-// addSubmission(submissions, "Vader", 95, "1977-06-22");
-// addSubmission(submissions, "Dorothy", 98, "1954-11-24");
-// console.log(submissions);
+addSubmission(submissions, "Justin", 32, "1988-03-27");
+addSubmission(submissions, "Luke", 91, "2020-20-05");
+addSubmission(submissions, "Vader", 95, "1977-06-22");
+addSubmission(submissions, "Dorothy", 98, "1954-11-24");
+console.log(submissions);
 
 // deleteSubmissionByIndex(submissions, 0);
 // deleteSubmissionByIndex(submissions, 2);
