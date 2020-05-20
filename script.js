@@ -4,9 +4,7 @@ function Student(name, score, date) {
     this.name = name;
     this.score = score;
     this.date = date;
-    this.passed = function() {
-        return this.score >= 60;
-    };
+    this.passed = passOrFail;
     submissions.push(this);
 };
 
@@ -15,7 +13,10 @@ let student2 = new Student("Joe", 77, "2018-05-14");
 let student3 = new Student("Jack", 59, "2019-07-05");
 let student4 = new Student("Jill", 88, "2020-04-22");
 
-// 
+function passOrFail() {
+    return this.score >= 60;
+}
+
 function addSubmission(array, newName, newScore, newDate) {
     let newSubmission = new Student(newName, newScore, newDate)
     if (!array.includes(newSubmission)) {
@@ -36,7 +37,7 @@ function deleteSubmissionByName(array, name) {
 
 function editSubmission(array, index, score) {
     array[index].score = score;
-    return array[index].score >= 60 ? array[index].passed : !array[index].passed;
+    return passOrFail();
 };
 
 function findSubmissionByName(array, name) {
@@ -80,5 +81,4 @@ function filter90AndAbove(array) {
 // findAverageScore(submissions);
 // console.log(filterPassing(submissions));
 // filter90AndAbove(submissions);
-// console.log(submissions);
-
+console.log(submissions);
