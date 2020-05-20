@@ -1,11 +1,15 @@
 let submissions = [];
 
-function Student(name, score, date, submissions) {
+function Student(name, score, date) {
     this.name = name;
     this.score = score;
     this.date = date;
-    this.passed = function() { return this.score >= 60; };
+    this.passed = function() {
+        return this.score >= 60;
+    };
+    submissions.push(this);
 };
+
 
 let student1 = new Student("Jane", 95, "2020-01-24");
 let student2 = new Student("Joe", 77, "2018-05-14");
@@ -81,4 +85,4 @@ function filter90AndAbove(array) {
 // findAverageScore(submissions);
 // console.log(filterPassing(submissions));
 // filter90AndAbove(submissions);
-// console.log(submissions[0].passed());
+console.log(submissions);
