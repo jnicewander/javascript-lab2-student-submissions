@@ -71,7 +71,8 @@ function findLowestScore(array) {
 function findAverageScore(array) {
     let sum = 0;
     for(let obj of array) {
-        sum = obj.score += obj.score
+        // I hate math. 
+        sum += obj.score
     }
     return sum / array.length;
 };
@@ -111,7 +112,7 @@ function filter90AndAbove(array) {
 
 // console.log(findLowestScore(submissions));
 
-// console.log(findAverageScore(submissions));
+console.log(findAverageScore(submissions));
 
 // console.log(filterPassing(submissions));
 
