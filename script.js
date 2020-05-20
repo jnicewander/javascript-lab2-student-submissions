@@ -1,37 +1,16 @@
-const submissions = [
-    {
-        name: "Jane",
-        score: 95,
-        date: "2020-01-24",
-        passed: function() {
-            return this.score >= 60;
-        }
-    },
-    {
-        name: "Joe",
-        score: 77,
-        date: "2018-05-14",
-        passed: function() {
-            return this.score >= 60;
-        }
-    },
-    {
-        name: "Jack",
-        score: 59,
-        date: "2019-07-05",
-        passed: function () {
-            return this.score >= 60;
-        }
-    },
-    {
-        name: "Jill",
-        score: 88,
-        date: "2020-04-22",
-        passed: function () {
-            return this.score >= 60;
-        }
-    }
-];
+let submissions = [];
+
+function Student(name, score, date, submissions) {
+    this.name = name;
+    this.score = score;
+    this.date = date;
+    this.passed = function() { return this.score >= 60; };
+};
+
+let student1 = new Student("Jane", 95, "2020-01-24");
+let student2 = new Student("Joe", 77, "2018-05-14");
+let student3 = new Student("Jack", 59, "2019-07-05");
+let student4 = new Student("Jill", 88, "2020-04-22");
 
 function addSubmission(array, newName, newScore, newDate) {
     array.push(
@@ -93,13 +72,13 @@ function filter90AndAbove(array) {
 
 // TESTS
 
-addSubmission(submissions, "Justin", "32", "1988-03-27");
+// addSubmission(submissions, "Justin", "32", "1988-03-27");
 // deleteSubmissionByIndex(submissions, 3);
 // deleteSubmissionByName(submissions, "Joe");
 // editSubmission(submissions, 0, 60);
 // findSubmissionByName(submissions, "Jack");
 // console.log(findLowestScore(submissions));
 // findAverageScore(submissions);
-console.log(filterPassing(submissions));
+// console.log(filterPassing(submissions));
 // filter90AndAbove(submissions);
 // console.log(submissions[0].passed());
