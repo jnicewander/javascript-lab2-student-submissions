@@ -10,23 +10,19 @@ function Student(name, score, date) {
     submissions.push(this);
 };
 
-
 let student1 = new Student("Jane", 95, "2020-01-24");
 let student2 = new Student("Joe", 77, "2018-05-14");
 let student3 = new Student("Jack", 59, "2019-07-05");
 let student4 = new Student("Jill", 88, "2020-04-22");
 
+// 
 function addSubmission(array, newName, newScore, newDate) {
-    array.push(
-        {
-            name:newName, 
-            score:newScore, 
-            date:newDate,
-            passed: function() {
-                return this.score >= 60;
-            }
-        }
-    );
+    let newSubmission = new Student(newName, newScore, newDate)
+    if (!array.includes(newSubmission)) {
+        array.push(newSubmission);
+    };
+    console.log(submissions);
+
 };
 
 function deleteSubmissionByIndex(array, index) {
@@ -73,7 +69,6 @@ function filter90AndAbove(array) {
     return array.filter(obj => obj.score >= 90);
 };
 
-
 // TESTS
 
 // addSubmission(submissions, "Justin", "32", "1988-03-27");
@@ -85,4 +80,5 @@ function filter90AndAbove(array) {
 // findAverageScore(submissions);
 // console.log(filterPassing(submissions));
 // filter90AndAbove(submissions);
-console.log(submissions);
+// console.log(submissions);
+
