@@ -51,7 +51,7 @@ function deleteSubmissionByName(array, name) {
 
 function editSubmission(array, index, score) {
     array[index].score = score;
-    return array[index].score >= 60 ? array[index].passed : !array[index].passed;
+    return passOrFail();
 };
 
 function findSubmissionByName(array, name) {
@@ -87,11 +87,11 @@ function filter90AndAbove(array) {
 
 // TESTS
 
-addSubmission(submissions, "Justin", 32, "1988-03-27");
-addSubmission(submissions, "Luke", 91, "2020-20-05");
-addSubmission(submissions, "Vader", 95, "1977-06-22");
-addSubmission(submissions, "Dorothy", 98, "1954-11-24");
-console.log(submissions);
+// addSubmission(submissions, "Justin", 32, "1988-03-27");
+// addSubmission(submissions, "Luke", 91, "2020-20-05");
+// addSubmission(submissions, "Vader", 95, "1977-06-22");
+// addSubmission(submissions, "Dorothy", 98, "1954-11-24");
+// console.log(submissions);
 
 // deleteSubmissionByIndex(submissions, 0);
 // deleteSubmissionByIndex(submissions, 2);
@@ -101,8 +101,8 @@ console.log(submissions);
 // deleteSubmissionByName(submissions, "Jill");
 // console.log(submissions);
 
-// editSubmission(submissions, 0, 48);
-// editSubmission(submissions, 2, 75);
+// editSubmission(submissions, 0, 60);
+// editSubmission(submissions, 2, 30);
 // console.log(submissions[0], submissions[0].passed());
 // console.log(submissions[2], submissions[2].passed());
 
