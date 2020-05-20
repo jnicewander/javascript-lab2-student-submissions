@@ -93,13 +93,24 @@ function filter90AndAbove(array) {
 
 // TESTS
 
-addSubmission(submissions, "Justin", "32", "1988-03-27");
-// deleteSubmissionByIndex(submissions, 3);
+// addSubmission(submissions, "Justin", 32, "1988-03-27");
+// addSubmission(submissions, "Luke", 91, "2020-20-05");
+// addSubmission(submissions, "Vader", 95, "1977-06-22");
+// addSubmission(submissions, "Dorothy", 98, "1954-11-24");
+// addSubmission(submissions, "Jessica", 88, "2010-08-15");
+// addSubmission(submissions, "Morty", 97, "1999-12-31");
+// console.log(submissions);
+// console.log(`There are currently ${submissions.length} objects inside the submissions array.`);
+// Submissions now has 6 new objects with the above properties, for a total of 10.
+
+deleteSubmissionByIndex(submissions, 4);
+deleteSubmissionByIndex(submissions, 3);
+
 // deleteSubmissionByName(submissions, "Joe");
 // editSubmission(submissions, 0, 60);
 // findSubmissionByName(submissions, "Jack");
 // console.log(findLowestScore(submissions));
 // findAverageScore(submissions);
-console.log(filterPassing(submissions));
+// console.log(filterPassing(submissions));
 // filter90AndAbove(submissions);
 // console.log(submissions[0].passed());
