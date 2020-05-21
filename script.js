@@ -57,7 +57,7 @@ function findLowestScore(array) {
 function findAverageScore(array) {
     let sum = 0;
     for(let obj of array) {
-        sum = obj.score += obj.score
+        sum += obj.score
     }
     return sum / array.length;
 };
