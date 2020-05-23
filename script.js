@@ -3,25 +3,25 @@ const submissions = [
         name: "Jane",
         score: 95,
         date: "2020-01-24",
-        passed: passOrFail
+        passed: passOrFail()
     },
     {
         name: "Joe",
         score: 77,
         date: "2018-05-14",
-        passed: passOrFail
+        passed: passOrFail()
     },
     {
         name: "Jack",
         score: 59,
         date: "2019-07-05",
-        passed: passOrFail
+        passed: passOrFail()
     },
     {
         name: "Jill",
         score: 88,
         date: "2020-04-22",
-        passed: passOrFail
+        passed: passOrFail()
     }
 ];
 
@@ -35,7 +35,7 @@ function addSubmission(array, newName, newScore, newDate) {
             name:newName, 
             score:newScore, 
             date:newDate,
-            passed:passOrFail
+            passed:passOrFail()
         }
     );
 };
@@ -100,7 +100,7 @@ function filter90AndAbove(array) {
 
 // deleteSubmissionByName(submissions, "Joe");
 // deleteSubmissionByName(submissions, "Jill");
-// console.log(submissions);
+console.log(submissions);
 
 // editSubmission(submissions, 0, 60);
 // editSubmission(submissions, 2, 30);
