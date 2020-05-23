@@ -100,7 +100,7 @@ function filter90AndAbove(array) {
 
 // deleteSubmissionByName(submissions, "Joe");
 // deleteSubmissionByName(submissions, "Jill");
-console.log(submissions);
+// console.log(submissions);
 
 // editSubmission(submissions, 0, 60);
 // editSubmission(submissions, 2, 30);
